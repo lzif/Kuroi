@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.svelte";
-
+import anime from "../models/anime";
+const data = await anime.getCatalog();
 ---
 
 <Layout title="Welcome to Astro.">
     <Nav />
+    <pre>{JSON.stringify(data,null,2)}</pre>
 </Layout>
