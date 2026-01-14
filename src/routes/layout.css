@@ -1,1 +1,73 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-primary: #0284c5;
+  --color-primary-dark: #026aa0;
+  --color-background-light: #3bb8f7;
+  --color-background-dark: #191e29;
+  --color-pop-pink: #F472B6;
+  --color-pop-hot: #DB2777;
+  --color-pop-paper: #FAFAFA;
+  --color-pop-blue: #E0F2FE;
+
+  --font-display: "Spline Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --shadow-hard-sm: 4px 4px 0px 0px rgba(0,0,0,0.1);
+  --shadow-hard-md: 6px 6px 0px 0px rgba(0,0,0,0.1);
+  --shadow-hard-lg: 10px 10px 0px 0px rgba(0,0,0,0.1);
+  --shadow-hard-xl: 16px 16px 0px 0px rgba(0,0,0,0.1);
+
+  --background-image-dot-pattern: radial-gradient(circle, rgba(255,255,255,0.3) 2px, transparent 2.5px);
+}
+
+/* Custom CSS from reference */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background-light);
+    background-image: var(--background-image-dot-pattern);
+    background-size: 24px 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+}
+
+.text-outline-white {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    background-clip: text;
+}
+
+.text-sticker {
+    color: #0c171c;
+    text-shadow: 
+        -2px -2px 0 #fff,  
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+        2px  2px 0 #fff;
+}
+
+.tape-corner {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: rotate(-45deg);
+    top: -10px;
+    left: -25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.tape-corner-br {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: rotate(-45deg);
+    bottom: -10px;
+    right: -25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 10;
+}
