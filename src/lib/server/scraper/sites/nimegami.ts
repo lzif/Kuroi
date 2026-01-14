@@ -120,19 +120,65 @@ export class NimegamiScraper extends BaseScraper {
     const $ = await this.fetchDOM(url);
 
     const title = $('.entry-title, h1').text().trim();
-    const coverImage = $('.thumb img, .entry-content img').first().attr('src') || '';
-    const synopsis = $('.entry-content p').first().text().trim();
+    
+    // Synopsis
+    const synopsis = $('#Sinopsis p').first().text().trim() || $('.entry-content p').first().text().trim();
 
+    // Cover Image
+    let coverImage = '';
+    const scriptContent = $('script').filter((_, el) => ($(el).html() || '').includes('const poster')).html();
+    const match = scriptContent?.match(/const poster = "(.*?)";/);
+    if (match) {
+      try {
+        coverImage = atob(match[1]);
+      } catch (e) {
+        console.warn('Failed to decode poster', e);
+      }
+    }
+    if (!coverImage) {
+        coverImage = $('.thumb img, .entry-content img, .video-streaming img').first().attr('src') || '';
+    }
+
+    // Metadata
     let totalEpisodes = 0;
     let score = 0;
     let releaseYear = 0;
     let type: any = 'unknown';
     let status: any = 'unknown';
+    const genres: string[] = [];
 
-    const contentText = $('.entry-content').text();
-    if (contentText.includes('Type: TV')) type = 'tv';
-    if (contentText.includes('Status: Ongoing')) status = 'ongoing';
-    if (contentText.includes('Status: Complete')) status = 'completed';
+    $('.info2 table tr').each((_, el) => {
+        const $el = $(el);
+        const key = $el.find('td').first().text().toLowerCase();
+        const value = $el.find('td').last();
+        const valueText = value.text().trim();
+
+        if (key.includes('type')) {
+            if (valueText.toLowerCase().includes('tv')) type = 'tv';
+            else if (valueText.toLowerCase().includes('movie')) type = 'movie';
+        }
+        if (key.includes('status')) {
+            if (valueText.toLowerCase().includes('ongoing')) status = 'ongoing';
+            else if (valueText.toLowerCase().includes('complete')) status = 'completed';
+        }
+        if (key.includes('rating')) {
+            score = parseFloat(valueText) || 0;
+        }
+        if (key.includes('musim') || key.includes('rilis')) {
+             const yearMatch = valueText.match(/(\d{4})/);
+             if (yearMatch) releaseYear = parseInt(yearMatch[1]);
+        }
+        if (key.includes('kategori')) {
+            value.find('a').each((_, a) => genres.push($(a).text()));
+        }
+    });
+    
+    // Fallback parsing if table not found
+    if (status === 'unknown') {
+        const contentText = $('.entry-content').text();
+        if (contentText.includes('Status: Ongoing')) status = 'ongoing';
+        if (contentText.includes('Status: Complete')) status = 'completed';
+    }
 
     return {
       id: slug,
@@ -141,7 +187,7 @@ export class NimegamiScraper extends BaseScraper {
       alternativeTitles: [],
       synopsis,
       coverImage,
-      genres: [],
+      genres,
       status,
       type,
       totalEpisodes,
@@ -156,31 +202,50 @@ export class NimegamiScraper extends BaseScraper {
     const $ = await this.fetchDOM(url);
     const episodes: EpisodeData[] = [];
 
-    // Try to find episode links in content
-    // Nimegami often uses a list of links for episodes in "Batch" or single posts
-    // Structure varies widely. Looking for common patterns.
-
-    // Pattern 1: List of links with text "Episode X"
-    $('a').each((_, el) => {
+    // Pattern: Batch/Single page with headers for episodes
+    $('h4').each((_, el) => {
       const text = $(el).text();
-      const href = $(el).attr('href');
-      if (text.match(/Episode\s+\d+/i) && href && href.includes(this.baseUrl)) {
-        const epSlug = href.replace(this.baseUrl, '').replace(/^\//, '').replace(/\/$/, '');
-        const epNumMatch = text.match(/Episode\s+(\d+)/i);
-        const epNum = epNumMatch ? parseInt(epNumMatch[1]) : 0;
-
-        if (epNum > 0) {
-          episodes.push({
-            id: epSlug,
-            animeId: slug,
-            episodeNumber: epNum,
-            title: text,
-            downloadLinks: [],
-            streamLinks: []
-          });
+      const epMatch = text.match(/Episode\s+(\d+)/i);
+      
+      if (epMatch) {
+        const epNum = parseInt(epMatch[1]);
+        // Avoid duplicates if multiple headers exist or duplicate logic
+        if (!episodes.find(e => e.episodeNumber === epNum)) {
+             episodes.push({
+                id: `${slug}-episode-${epNum}`,
+                animeId: slug,
+                episodeNumber: epNum,
+                title: text,
+                downloadLinks: [], // Populated in getWatch to save bandwidth/parsing time or could populate here
+                streamLinks: []
+             });
         }
       }
     });
+    
+    // Pattern 2: List of links (old style) if no h4 matches found
+    if (episodes.length === 0) {
+        $('a').each((_, el) => {
+            const text = $(el).text();
+            const href = $(el).attr('href');
+            if (text.match(/Episode\s+\d+/i) && href && href.includes(this.baseUrl)) {
+                const epSlug = href.replace(this.baseUrl, '').replace(/^\//, '').replace(/\/$/, '');
+                const epNumMatch = text.match(/Episode\s+(\d+)/i);
+                const epNum = epNumMatch ? parseInt(epNumMatch[1]) : 0;
+
+                if (epNum > 0 && !episodes.find(e => e.episodeNumber === epNum)) {
+                episodes.push({
+                    id: epSlug,
+                    animeId: slug,
+                    episodeNumber: epNum,
+                    title: text,
+                    downloadLinks: [],
+                    streamLinks: []
+                });
+                }
+            }
+        });
+    }
 
     return episodes.sort((a, b) => a.episodeNumber - b.episodeNumber);
   }
@@ -193,36 +258,62 @@ export class NimegamiScraper extends BaseScraper {
     const downloadLinks: DownloadLink[] = [];
     const streamLinks: StreamingLink[] = [];
 
-    // Extract download links (often in .download-box or tables)
-    // Nimegami uses various structures. 
-    // Generic approach: Find links that look like file hosts (Google Drive, etc)
-    // and group them.
+    // Try to find the specific episode section
+    let $epHeader = $('h4').filter((_, el) => {
+        const text = $(el).text();
+        // Strict match for episode number to avoid matching "Episode 14" when searching for "1"
+        return text.match(new RegExp(`Episode\\s+${episodeNumber}(?![0-9])`, 'i')) !== null;
+    }).first();
 
-    $('.download-box, .box-download, table.download').find('a').each((_, el) => {
-      const $el = $(el);
-      const host = $el.text().trim();
-      const href = $el.attr('href') || '';
-      const quality = $el.closest('tr').find('td').first().text().trim() || 'Unknown';
-
-      if (href) {
-        downloadLinks.push({
-          quality,
-          host,
-          url: href
+    if ($epHeader.length) {
+        // Find the following list(s)
+        const $ul = $epHeader.next('ul');
+        $ul.find('li').each((_, el) => {
+            const $el = $(el);
+            const qualityWithHost = $el.text(); // e.g. "360p MiteDrive (360p)Krakenfiles (360p)"
+            const qualityMatch = $el.find('strong').text(); // "360p"
+            const quality = qualityMatch || 'Unknown';
+            
+            $el.find('a').each((_, a) => {
+                const $a = $(a);
+                const host = $a.text().trim();
+                const href = $a.attr('href') || '';
+                if (href) {
+                     downloadLinks.push({
+                         quality,
+                         host,
+                         url: href
+                     });
+                }
+            });
         });
-      }
-    });
+    } else {
+        // Fallback for single episode pages (old style)
+         $('.download-box, .box-download, table.download').find('a').each((_, el) => {
+            const $el = $(el);
+            const host = $el.text().trim();
+            const href = $el.attr('href') || '';
+            const quality = $el.closest('tr').find('td').first().text().trim() || 'Unknown';
 
-    // Stream links often embedded in iframes
-    $('iframe').each((_, el) => {
-      const src = $(el).attr('src') || $(el).attr('data-src');
-      if (src) {
-        streamLinks.push({
-          server: 'Stream',
-          url: src
+            if (href) {
+                downloadLinks.push({
+                quality,
+                host,
+                url: href
+                });
+            }
         });
-      }
-    });
+        
+        $('iframe').each((_, el) => {
+            const src = $(el).attr('src') || $(el).attr('data-src');
+            if (src) {
+                streamLinks.push({
+                server: 'Stream',
+                url: src
+                });
+            }
+        });
+    }
 
     return {
       id: slug,
@@ -234,4 +325,3 @@ export class NimegamiScraper extends BaseScraper {
     };
   }
 }
-
