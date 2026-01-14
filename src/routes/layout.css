@@ -3,25 +3,42 @@
 @theme {
   --color-primary: #0284c5;
   --color-primary-dark: #026aa0;
-  --color-background-light: #3bb8f7;
-  --color-background-dark: #191e29;
+  
+  --color-pop-sky: #3bb8f7;
+  --color-pop-deep: #0284c5;
   --color-pop-pink: #F472B6;
   --color-pop-hot: #DB2777;
   --color-pop-paper: #FAFAFA;
   --color-pop-blue: #E0F2FE;
 
+  --color-background-light: #3bb8f7;
+  --color-background-dark: #191e29;
+
   --font-display: "Spline Sans", sans-serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
 
-  --shadow-hard-sm: 4px 4px 0px 0px rgba(0,0,0,0.1);
-  --shadow-hard-md: 6px 6px 0px 0px rgba(0,0,0,0.1);
-  --shadow-hard-lg: 10px 10px 0px 0px rgba(0,0,0,0.1);
-  --shadow-hard-xl: 16px 16px 0px 0px rgba(0,0,0,0.1);
+  --shadow-hard-sm: 2px 2px 0 0 rgba(0,0,0,0.1);
+  --shadow-hard-md: 4px 4px 0 0 rgba(0,0,0,0.1);
+  --shadow-hard-lg: 10px 10px 0 0 rgba(0,0,0,0.1);
+  --shadow-hard-xl: 10px 10px 0 0 rgba(0,0,0,0.1);
+  --shadow-hard-white: 4px 4px 0 0 #ffffff;
 
+  --background-image-notebook: linear-gradient(#e2e8f0 1px, transparent 1px);
+  --background-image-dots: radial-gradient(#ffffff 2px, transparent 2px);
   --background-image-dot-pattern: radial-gradient(circle, rgba(255,255,255,0.3) 2px, transparent 2.5px);
 }
 
-/* Custom CSS from reference */
+@utility bg-notebook {
+    background-image: var(--background-image-notebook);
+    background-size: 100% 32px;
+}
+
+@utility bg-dots {
+    background-image: var(--background-image-dots);
+    background-size: 24px 24px;
+}
+
+/* Custom CSS */
 body {
     font-family: var(--font-body);
     background-color: var(--color-background-light);
@@ -70,4 +87,33 @@ h1, h2, h3, h4, h5, h6 {
     right: -25px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     z-index: 10;
+}
+
+.tape-strip {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    backdrop-filter: blur(2px);
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #0284c5; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #026aa0; 
+}
+
+/* Mission Log Dashed Line Animation */
+.mission-line {
+    background-image: linear-gradient(to bottom, #0284c5 50%, transparent 50%);
+    background-size: 2px 20px;
+    background-repeat: repeat-y;
 }
