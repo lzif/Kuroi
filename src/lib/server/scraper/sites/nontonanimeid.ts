@@ -121,7 +121,7 @@ export class NontonAnimeIDScraper extends BaseScraper {
     const synopsis = $('.entry-content, .desc').first().text().trim();
     
     const genres: string[] = [];
-    $('.genre a, .genxed a').each((_, el) => genres.push($(el).text()));
+    $('.genre a, .genxed a').each((_, el) => { genres.push($(el).text()); });
 
     let score = 0;
     const ratingText = $('.rating, .score').text();

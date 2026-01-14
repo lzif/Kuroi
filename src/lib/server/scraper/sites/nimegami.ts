@@ -169,7 +169,7 @@ export class NimegamiScraper extends BaseScraper {
              if (yearMatch) releaseYear = parseInt(yearMatch[1]);
         }
         if (key.includes('kategori')) {
-            value.find('a').each((_, a) => genres.push($(a).text()));
+            value.find('a').each((_, a) => { genres.push($(a).text()); });
         }
     });
     
@@ -209,14 +209,13 @@ export class NimegamiScraper extends BaseScraper {
       
       if (epMatch) {
         const epNum = parseInt(epMatch[1]);
-        // Avoid duplicates if multiple headers exist or duplicate logic
         if (!episodes.find(e => e.episodeNumber === epNum)) {
              episodes.push({
                 id: `${slug}-episode-${epNum}`,
                 animeId: slug,
                 episodeNumber: epNum,
                 title: text,
-                downloadLinks: [], // Populated in getWatch to save bandwidth/parsing time or could populate here
+                downloadLinks: [], 
                 streamLinks: []
              });
         }
@@ -251,27 +250,52 @@ export class NimegamiScraper extends BaseScraper {
   }
 
   async getWatch(slug: string, episodeNumber: number): Promise<EpisodeData> {
-    const url = this.resolveUrl(slug);
-    const $ = await this.fetchDOM(url);
+    const initialUrl = this.resolveUrl(slug);
+    let $ = await this.fetchDOM(initialUrl);
     const title = $('.entry-title, h1').text().trim();
 
     const downloadLinks: DownloadLink[] = [];
     const streamLinks: StreamingLink[] = [];
 
-    // Try to find the specific episode section
+    // Strategy 1: Look for specific episode section on the current page (Batch style)
     let $epHeader = $('h4').filter((_, el) => {
         const text = $(el).text();
-        // Strict match for episode number to avoid matching "Episode 14" when searching for "1"
         return text.match(new RegExp(`Episode\\s+${episodeNumber}(?![0-9])`, 'i')) !== null;
     }).first();
 
+    // Strategy 2: If not found, look for a link to the specific episode page and navigate there
+    if ($epHeader.length === 0) {
+       let epLink = '';
+       $('a').each((_, el) => {
+            const text = $(el).text();
+            const href = $(el).attr('href');
+            if (text.match(new RegExp(`Episode\\s+${episodeNumber}(?![0-9])`, 'i')) && href) {
+                 epLink = href;
+                 return false; 
+            }
+       });
+
+       if (epLink) {
+          try {
+            // console.log(`[Nimegami] Navigating to episode link: ${epLink}`);
+            $ = await this.fetchDOM(epLink);
+            // Reset epHeader because now we are on the specific page, so we might need to parse differently
+            // Usually on specific page, the whole page is the episode.
+            // But we keep $epHeader empty to trigger the "Single Page" fallback below.
+          } catch (e) {
+            console.error(`[Nimegami] Failed to fetch episode link: ${epLink}`, e);
+          }
+       }
+    }
+
+    // Parse logic
     if ($epHeader.length) {
-        // Find the following list(s)
+        // ... (Batch style parsing)
         const $ul = $epHeader.next('ul');
         $ul.find('li').each((_, el) => {
             const $el = $(el);
-            const qualityWithHost = $el.text(); // e.g. "360p MiteDrive (360p)Krakenfiles (360p)"
-            const qualityMatch = $el.find('strong').text(); // "360p"
+            const qualityWithHost = $el.text();
+            const qualityMatch = $el.find('strong').text(); 
             const quality = qualityMatch || 'Unknown';
             
             $el.find('a').each((_, a) => {
@@ -288,7 +312,7 @@ export class NimegamiScraper extends BaseScraper {
             });
         });
     } else {
-        // Fallback for single episode pages (old style)
+        // Fallback for single episode pages (old style or after navigation)
          $('.download-box, .box-download, table.download').find('a').each((_, el) => {
             const $el = $(el);
             const host = $el.text().trim();
