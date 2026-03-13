@@ -1,7 +1,10 @@
-import { scraperManager } from '$lib/server/scraper';
+import { createCachedScraperManager } from '$lib/server/scraper';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params, url }) => {
+export const load: PageServerLoad = async ({ params, url, platform }) => {
+  const db = platform?.env?.DB;
+  const scraperManager = createCachedScraperManager(db);
+
   const { slug } = params;
   const epParam = url.searchParams.get('ep');
   const episodeNumber = epParam ? Number(epParam) : null;

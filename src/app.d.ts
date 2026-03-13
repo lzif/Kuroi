@@ -1,5 +1,10 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
+
+interface Env {
+	DB: D1Database;
+}
+
 declare global {
 	namespace App {
 		interface Platform {

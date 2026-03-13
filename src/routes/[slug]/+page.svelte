@@ -19,7 +19,7 @@
   }
 </script>
 
-<div class="min-h-screen bg-background-light dark:bg-background-dark font-display relative overflow-x-hidden selection:bg-pop-pink selection:text-white">
+<div class="min-h-screen bg-background-light font-display relative overflow-x-hidden selection:bg-pop-pink selection:text-white">
   <!-- Background Pattern -->
   <div class="fixed inset-0 z-0 opacity-20 bg-dots pointer-events-none"></div>
 
@@ -58,8 +58,8 @@
             </div>
 
             <!-- Player Controls / Server Select -->
-            <div class="bg-pop-paper dark:bg-slate-900 rounded-2xl p-6 shadow-hard-md border border-white dark:border-slate-700 relative">
-                 <div class="absolute inset-0 z-0 bg-notebook opacity-40 dark:opacity-10 pointer-events-none rounded-2xl"></div>
+            <div class="bg-pop-paper rounded-2xl p-6 shadow-hard-md border-4 border-white relative">
+                 <div class="absolute inset-0 z-0 bg-notebook opacity-40 pointer-events-none rounded-2xl"></div>
                  <div class="relative z-10 flex flex-col gap-4">
                      <div class="flex justify-between items-start">
                          <div>
@@ -103,13 +103,13 @@
 
         <!-- Right: Sidebar (Episodes) -->
         <div class="w-full lg:w-[360px] flex-shrink-0 flex flex-col h-auto lg:h-[calc(100vh-100px)] lg:sticky lg:top-8">
-            <div class="bg-pop-paper dark:bg-slate-900 rounded-[2rem] shadow-hard-lg border border-white dark:border-slate-700 p-6 flex-1 flex flex-col overflow-hidden relative">
-                <div class="absolute inset-0 z-0 bg-notebook opacity-40 dark:opacity-10 pointer-events-none rounded-[2rem]"></div>
+            <div class="bg-pop-paper rounded-[2rem] shadow-hard-lg border-4 border-white p-6 flex-1 flex flex-col overflow-hidden relative">
+                <div class="absolute inset-0 z-0 bg-notebook opacity-40 pointer-events-none rounded-[2rem]"></div>
                 
                 <div class="relative z-10 mb-4 flex items-center justify-between">
-                    <h3 class="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight flex items-center gap-2">
-                        <span class="material-symbols-outlined text-pop-deep">assignment</span>
-                        Mission Log
+                    <h3 class="text-xl font-black text-slate-900 uppercase tracking-tight flex items-center gap-2">
+                        <span class="material-symbols-outlined text-pop-deep">format_list_bulleted</span>
+                        Episodes
                     </h3>
                 </div>
                 
@@ -124,7 +124,7 @@
                          </div>
                          <div class="flex-1 min-w-0">
                              <p class="text-xs font-bold {data.currentEpisode === ep.episodeNumber ? 'text-pop-deep' : 'text-slate-400 group-hover:text-pop-sky'}">EPISODE {ep.episodeNumber}</p>
-                             <h4 class="font-bold text-slate-800 dark:text-slate-900 text-sm truncate">{ep.title || `Episode ${ep.episodeNumber}`}</h4>
+                             <h4 class="font-bold text-slate-800 text-sm truncate">{ep.title || `Episode ${ep.episodeNumber}`}</h4>
                          </div>
                          {#if data.currentEpisode === ep.episodeNumber}
                             <span class="material-symbols-outlined text-pop-deep animate-pulse">play_circle</span>
@@ -140,29 +140,29 @@
     
     <!-- Navigation -->
     <header class="relative z-20 w-full px-4 sm:px-8 py-4">
-        <nav class="mx-auto max-w-7xl bg-white/90 dark:bg-[#1f2937]/90 backdrop-blur-md rounded-2xl shadow-hard-md border-2 border-white dark:border-gray-700 px-6 py-3 flex items-center justify-between">
+        <nav class="mx-auto max-w-7xl bg-pop-paper/95 backdrop-blur-md rounded-2xl shadow-hard-md border-4 border-white px-6 py-3 flex items-center justify-between">
             <div class="flex items-center gap-6">
                 <!-- Logo -->
                 <a class="flex items-center gap-2 group" href="/">
-                    <div class="size-10 bg-pop-deep rounded-lg flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform duration-300 shadow-hard-sm">
+                    <div class="size-10 bg-pop-deep rounded-xl flex items-center justify-center text-white transform group-hover:rotate-12 transition-transform duration-300 shadow-hard-sm border-2 border-white">
                         <span class="material-symbols-outlined text-2xl font-bold">folder_open</span>
                     </div>
-                    <span class="text-pop-deep dark:text-sky-400 font-bold text-xl tracking-tight">ARCHIVE.NET</span>
+                    <span class="text-pop-deep font-display font-bold text-xl tracking-tight hidden sm:block">Kuroi</span>
                 </a>
                 <!-- Desktop Links -->
                 <div class="hidden md:flex items-center gap-6 ml-4">
-                    <a class="text-slate-600 dark:text-slate-300 font-bold text-sm hover:text-pop-hot transition-colors uppercase tracking-wider" href="#">Reports</a>
-                    <a class="text-slate-600 dark:text-slate-300 font-bold text-sm hover:text-pop-hot transition-colors uppercase tracking-wider" href="#">Seasonal</a>
-                    <a class="text-slate-600 dark:text-slate-300 font-bold text-sm hover:text-pop-hot transition-colors uppercase tracking-wider" href="#">Community</a>
+                    <a class="text-slate-600 font-display font-bold text-sm hover:text-pop-hot transition-colors uppercase tracking-wider" href="/reports">Reports</a>
+                    <a class="text-slate-600 font-display font-bold text-sm hover:text-pop-hot transition-colors uppercase tracking-wider" href="/seasonal">Seasonal</a>
+                    <a class="text-slate-600 font-display font-bold text-sm hover:text-pop-hot transition-colors uppercase tracking-wider" href="/community">Community</a>
                 </div>
             </div>
             <!-- Search & Profile -->
             <div class="flex items-center gap-4">
-                <div class="hidden sm:flex items-center bg-slate-100 dark:bg-slate-800 rounded-full px-4 py-2 border border-slate-200 dark:border-slate-700 focus-within:ring-2 ring-pop-deep ring-offset-2 transition-shadow">
+                <div class="hidden sm:flex items-center bg-slate-100 rounded-full px-4 py-2 border-2 border-slate-200 focus-within:border-pop-deep transition-colors">
                     <span class="material-symbols-outlined text-slate-400">search</span>
-                    <input class="bg-transparent border-none focus:ring-0 text-sm w-32 md:w-48 text-slate-800 dark:text-slate-100 placeholder-slate-400 font-medium" placeholder="Search archives..." type="text"/>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-32 md:w-48 text-slate-800 placeholder-slate-400 font-medium" placeholder="Search Kuroi..." type="text"/>
                 </div>
-                <button class="size-10 rounded-full bg-cover bg-center border-2 border-white shadow-md hover:scale-105 transition-transform" data-alt="User profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUT5Pw3Mp7woCtzzILEKkC1HVwe9cXGfNfT_XyOD30CK6vtm0PqmKXETfXxg8WlP1kSF1gnoXEZqrrrnCnZjswTf8NObDZRSYyYd_SCPMnhp4-EnbzVlrn2IudbHEDU52rZC6sTOCwVzhgs-Irzw-gc8Fpkuqhlg6Q1LgqTeY0bBJDQjcDT04piiSnbK73VgLzNjvt-hqkaDNhbDuLniruFvo_xnTKcq-_Nrsh_cF3kxPUh8qIHsuaFixgsldOYnkbNyfej6OD3VtP');">
+                <button aria-label="User Profile" class="size-10 rounded-full bg-cover bg-center border-2 border-white shadow-md hover:scale-105 transition-transform cursor-pointer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUT5Pw3Mp7woCtzzILEKkC1HVwe9cXGfNfT_XyOD30CK6vtm0PqmKXETfXxg8WlP1kSF1gnoXEZqrrrnCnZjswTf8NObDZRSYyYd_SCPMnhp4-EnbzVlrn2IudbHEDU52rZC6sTOCwVzhgs-Irzw-gc8Fpkuqhlg6Q1LgqTeY0bBJDQjcDT04piiSnbK73VgLzNjvt-hqkaDNhbDuLniruFvo_xnTKcq-_Nrsh_cF3kxPUh8qIHsuaFixgsldOYnkbNyfej6OD3VtP');">
                 </button>
             </div>
         </nav>
@@ -172,7 +172,7 @@
     <div class="relative z-10 max-w-7xl mx-auto px-8 py-4 flex gap-2 text-sm font-bold text-white/90">
         <a class="hover:underline opacity-80" href="/">DATABASE</a>
         <span>/</span>
-        <a class="hover:underline opacity-80" href="#">ARCHIVES</a>
+        <a class="hover:underline opacity-80" href="/anime">ANIME</a>
         <span>/</span>
         <span class="text-white drop-shadow-sm uppercase">{data.anime.title}</span>
     </div>
@@ -180,16 +180,16 @@
     <!-- Main Content "The File" -->
     <main class="relative z-10 w-full max-w-[1000px] mx-auto px-4 pb-20">
         <!-- The File Folder Sheet -->
-        <div class="relative bg-pop-paper dark:bg-slate-900 rounded-[2rem] shadow-hard-xl min-h-[800px] p-8 md:p-12 transform rotate-0 sm:rotate-[0.5deg]">
+        <div class="relative bg-pop-paper rounded-[2rem] shadow-hard-xl min-h-[800px] p-8 md:p-12 transform rotate-0 sm:rotate-[0.5deg] border-4 border-white">
             <!-- Notebook Lines Pattern Overlay -->
-            <div class="absolute inset-0 z-0 bg-notebook opacity-40 dark:opacity-10 pointer-events-none my-12 mx-8 rounded-[2rem]"></div>
+            <div class="absolute inset-0 z-0 bg-notebook opacity-40 pointer-events-none my-12 mx-8 rounded-[2rem]"></div>
             <!-- Decorative Tape - Top Left -->
             <div class="tape-strip absolute -top-4 -left-4 w-32 h-10 rotate-[-35deg] z-20 pointer-events-none"></div>
             <!-- Decorative Tape - Bottom Right -->
             <div class="tape-strip absolute -bottom-4 -right-4 w-32 h-10 rotate-[-35deg] z-20 pointer-events-none"></div>
-            <!-- "CONFIDENTIAL" Stamp -->
-            <div class="absolute top-8 right-8 border-4 border-red-500/20 text-red-500/20 font-black text-4xl px-4 py-2 rotate-12 pointer-events-none select-none z-0 hidden sm:block">
-                CONFIDENTIAL
+            <!-- "KUROI DB" Stamp -->
+            <div class="absolute top-8 right-8 border-4 border-slate-300/40 text-slate-300/40 font-black text-4xl px-4 py-2 rotate-12 pointer-events-none select-none z-0 hidden sm:block">
+                KUROI DB
             </div>
             
             <!-- Content Container -->
@@ -250,7 +250,7 @@
                             <span class="px-3 py-1 bg-sky-100 text-pop-deep text-xs font-bold rounded-md uppercase tracking-wide border border-sky-200">{data.anime.type || 'TV Series'}</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs font-bold rounded-md uppercase tracking-wide border border-purple-200">{data.anime.status === 'completed' ? 'Finished' : (data.anime.status || 'Unknown')}</span>
                         </div>
-                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight mb-4 drop-shadow-sm font-display uppercase">
+                        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight mb-4 drop-shadow-sm font-display uppercase">
                             {data.anime.title}
                         </h1>
                         <!-- Chips -->
@@ -268,43 +268,43 @@
                     </div>
                     <!-- Info Grid -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 font-body">
-                        <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
+                        <div class="bg-white/60 p-3 rounded-lg border border-slate-100">
                             <p class="text-xs text-slate-400 font-bold uppercase mb-1">Source</p>
-                            <p class="text-slate-800 dark:text-slate-200 font-bold truncate">{data.anime.source}</p>
+                            <p class="text-slate-800 font-bold truncate">{data.anime.source}</p>
                         </div>
-                        <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
+                        <div class="bg-white/60 p-3 rounded-lg border border-slate-100">
                             <p class="text-xs text-slate-400 font-bold uppercase mb-1">Year</p>
-                            <p class="text-slate-800 dark:text-slate-200 font-bold">{data.anime.releaseYear || 'N/A'}</p>
+                            <p class="text-slate-800 font-bold">{data.anime.releaseYear || 'N/A'}</p>
                         </div>
-                        <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
+                        <div class="bg-white/60 p-3 rounded-lg border border-slate-100">
                             <p class="text-xs text-slate-400 font-bold uppercase mb-1">Episodes</p>
-                            <p class="text-slate-800 dark:text-slate-200 font-bold">{data.anime.totalEpisodes || data.episodes.length} Eps</p>
+                            <p class="text-slate-800 font-bold">{data.anime.totalEpisodes || data.episodes.length} Eps</p>
                         </div>
-                        <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
+                        <div class="bg-white/60 p-3 rounded-lg border border-slate-100">
                             <p class="text-xs text-slate-400 font-bold uppercase mb-1">Score</p>
-                            <p class="text-slate-800 dark:text-slate-200 font-bold">{data.anime.score || '-'}</p>
+                            <p class="text-slate-800 font-bold">{data.anime.score || '-'}</p>
                         </div>
                     </div>
                     <!-- Synopsis -->
-                    <div class="prose prose-slate dark:prose-invert mb-10 max-w-none">
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white uppercase flex items-center gap-2 mb-2">
+                    <div class="prose prose-slate mb-10 max-w-none">
+                        <h3 class="text-lg font-bold text-slate-900 uppercase flex items-center gap-2 mb-2">
                             <span class="w-2 h-2 bg-pop-hot rounded-full"></span>
-                            Briefing
+                            Synopsis
                         </h3>
-                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-body bg-white/50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <p class="text-slate-600 leading-relaxed font-body bg-white/50 p-4 rounded-xl border border-slate-100">
                             {data.anime.synopsis || 'No synopsis available.'}
                         </p>
                     </div>
-                    <!-- Mission Log (Episodes) -->
+                    <!-- Episode List (Episodes) -->
                     <div class="relative">
                         <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight flex items-center gap-2">
-                                <span class="material-symbols-outlined text-pop-deep">assignment</span>
-                                Mission Log
+                            <h3 class="text-xl font-black text-slate-900 uppercase tracking-tight flex items-center gap-2">
+                                <span class="material-symbols-outlined text-pop-deep">format_list_bulleted</span>
+                                Episodes
                             </h3>
                             <div class="flex gap-2">
-                                <button class="p-2 hover:bg-slate-100 rounded-lg text-slate-400 hover:text-pop-deep transition-colors"><span class="material-symbols-outlined">grid_view</span></button>
-                                <button class="p-2 bg-slate-100 rounded-lg text-pop-deep"><span class="material-symbols-outlined">view_list</span></button>
+                                <button class="p-2 hover:bg-slate-100 rounded-lg text-slate-400 hover:text-pop-deep transition-colors cursor-pointer"><span class="material-symbols-outlined">grid_view</span></button>
+                                <button class="p-2 bg-slate-100 rounded-lg text-pop-deep cursor-pointer"><span class="material-symbols-outlined">view_list</span></button>
                             </div>
                         </div>
                         <!-- Timeline Container -->
@@ -324,14 +324,14 @@
                                     </div>
                                     
                                     <!-- Card -->
-                                    <a href={getEpisodeUrl(ep.episodeNumber)} class="flex-1 border rounded-lg p-3 shadow-sm flex justify-between items-center cursor-pointer transition-all {i === 0 ? 'bg-white ring-2 ring-pop-deep ring-offset-2 border-slate-200' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:bg-slate-50'}">
+                                    <a href={getEpisodeUrl(ep.episodeNumber)} class="flex-1 border rounded-lg p-3 shadow-sm flex justify-between items-center cursor-pointer transition-all {i === 0 ? 'bg-white ring-2 ring-pop-deep ring-offset-2 border-slate-200' : 'bg-white border-slate-200 hover:bg-slate-50'}">
                                         <div class="flex justify-between items-center w-full">
                                             <div>
                                                 <p class="text-xs font-bold {i === 0 ? 'text-pop-deep' : 'text-slate-400'} mb-0.5">EPISODE {ep.episodeNumber}</p>
-                                                <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm">{ep.title || `Episode ${ep.episodeNumber}`}</h4>
+                                                <h4 class="font-bold text-slate-800 text-sm">{ep.title || `Episode ${ep.episodeNumber}`}</h4>
                                             </div>
                                             {#if i === 0}
-                                             <div class="bg-slate-100 dark:bg-slate-700 rounded-lg p-1.5">
+                                             <div class="bg-slate-100 rounded-lg p-1.5">
                                                 <span class="material-symbols-outlined text-pop-deep">play_arrow</span>
                                              </div>
                                             {:else}
@@ -351,7 +351,7 @@
         <div class="text-center mt-12 mb-8">
             <p class="text-white/60 text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2">
                 <span class="w-1 h-1 bg-white rounded-full"></span>
-                Archive.net secure connection
+                Kuroi secure connection
                 <span class="w-1 h-1 bg-white rounded-full"></span>
             </p>
         </div>
@@ -365,22 +365,15 @@
         width: 8px;
     }
     .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent; 
+        background: transparent;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #cbd5e1; 
+        background: #cbd5e1;
         border-radius: 4px;
         border: 2px solid transparent;
         background-clip: content-box;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background-color: #94a3b8; 
-    }
-    
-    :global(.dark) .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #475569;
-    }
-    :global(.dark) .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background-color: #64748b; 
+        background-color: #94a3b8;
     }
 </style>

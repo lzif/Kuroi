@@ -1,7 +1,10 @@
-import { scraperManager } from '$lib/server/scraper';
+import { createCachedScraperManager } from '$lib/server/scraper';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ platform }) => {
+  const db = platform?.env?.DB;
+  const scraperManager = createCachedScraperManager(db);
+
   try {
     const homeData = await scraperManager.getHome();
     return {

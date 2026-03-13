@@ -7,6 +7,9 @@ export const AnimeDataSchema = z.object({
   id: z.string(),
   slug: z.string(),
   title: z.string(),
+  anilistId: z.number().optional(),
+  japaneseTitle: z.string().optional(),
+  synonyms: z.string().optional(),
   alternativeTitles: z.array(z.string()).default([]),
   synopsis: z.string().default(''),
   coverImage: z.string().url().or(z.string()),
@@ -16,6 +19,8 @@ export const AnimeDataSchema = z.object({
   totalEpisodes: z.number().optional(),
   score: z.number().optional(),
   releaseYear: z.number().optional(),
+  postedBy: z.string().optional(),
+  releasedOn: z.string().optional(),
   source: z.string(),
 });
 
@@ -47,12 +52,15 @@ export const AnimeListItemSchema = z.object({
   id: z.string(),
   slug: z.string(),
   title: z.string(),
+  anilistId: z.number().optional(),
   coverImage: z.string(),
   status: AnimeStatusSchema.optional(),
   episode: z.number().optional(), // For ongoing
   score: z.number().optional(), // For completed/search
   type: AnimeTypeSchema.optional(),
   releaseDate: z.string().optional(),
+  postedBy: z.string().optional(),
+  releasedOn: z.string().optional(),
   source: z.string(),
 });
 
@@ -68,6 +76,29 @@ export type DownloadLink = z.infer<typeof DownloadLinkSchema>;
 export type StreamingLink = z.infer<typeof StreamingLinkSchema>;
 export type AnimeListItem = z.infer<typeof AnimeListItemSchema>;
 export type SearchResult = z.infer<typeof SearchResultSchema>;
+
+// AniList Metadata
+export interface AnimeMetadata {
+  id: number;
+  title: {
+    romaji: string;
+    english: string;
+    native: string;
+  };
+  coverImage: {
+    large: string;
+    medium: string;
+  };
+  bannerImage?: string;
+  description?: string;
+  genres: string[];
+  status: string;
+  episodes?: number;
+  averageScore?: number;
+  season?: string;
+  seasonYear?: number;
+  studios?: string[];
+}
 
 export interface Scraper {
   name: string;

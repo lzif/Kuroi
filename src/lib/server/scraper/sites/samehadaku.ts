@@ -5,6 +5,16 @@ export class SamehadakuScraper extends BaseScraper {
   name = 'Samehadaku';
   baseUrl = 'https://samehadaku.li';
 
+  constructor() {
+    super({
+      minDelay: 2000,
+      maxRetries: 3,
+      baseDelay: 1500,
+      timeout: 25000,
+      useSession: true,
+    });
+  }
+
   async getHome(): Promise<{ ongoing: AnimeListItem[]; completed: AnimeListItem[] }> {
     const $ = await this.fetchDOM(this.baseUrl);
     const ongoing: AnimeListItem[] = [];

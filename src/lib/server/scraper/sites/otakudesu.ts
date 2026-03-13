@@ -5,6 +5,16 @@ export class OtakudesuScraper extends BaseScraper {
   name = 'Otakudesu';
   baseUrl = 'https://otakudesu.best';
 
+  constructor() {
+    super({
+      minDelay: 1500,
+      maxRetries: 3,
+      baseDelay: 1000,
+      timeout: 25000,
+      useSession: true,
+    });
+  }
+
   async getHome(): Promise<{ ongoing: AnimeListItem[]; completed: AnimeListItem[] }> {
     const $ = await this.fetchDOM(this.baseUrl);
     const ongoing: AnimeListItem[] = [];

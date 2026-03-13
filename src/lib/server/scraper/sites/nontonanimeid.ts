@@ -5,6 +5,16 @@ export class NontonAnimeIDScraper extends BaseScraper {
   name = 'NontonAnimeID';
   baseUrl = 'https://s7.nontonanimeid.boats';
 
+  constructor() {
+    super({
+      minDelay: 2500,      // Longer delay for Cloudflare
+      maxRetries: 3,
+      baseDelay: 2000,
+      timeout: 30000,
+      useSession: true,
+    });
+  }
+
   async getHome(): Promise<{ ongoing: AnimeListItem[]; completed: AnimeListItem[] }> {
     // Generic AnimeStream/WordPress theme structure
     const $ = await this.fetchDOM(this.baseUrl);

@@ -3,7 +3,15 @@
 	"name": "kuroi",
 	"compatibility_date": "2026-01-13",
 	"compatibility_flags": [
-		"nodejs_als"
+		"nodejs_als",
+		"nodejs_compat"
 	],
-	"pages_build_output_dir": ".svelte-kit/cloudflare"
+	"pages_build_output_dir": ".svelte-kit/cloudflare",
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "kuroi-db",
+			"database_id": "a5ddef19-640a-410c-b4d6-a78e91aeea70"
+		}
+	]
 }
