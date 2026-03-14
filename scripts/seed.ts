@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import fs from "fs";
 import { SamehadakuV2Adapter } from "../adapter/SamehadakuV2Adapter";
-import { createAniListClient } from "../src/lib/server/scraper/anilist";
+import { createAniListClient } from "../adapter/anilist";
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 

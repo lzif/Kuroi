@@ -1,5 +1,4 @@
 import type { AnimeMetadata } from './types';
-import { D1Cache } from './d1';
 
 const ANILIST_API_URL = 'https://graphql.anilist.co';
 
@@ -102,13 +101,7 @@ export function sanitizeTitleForAniList(rawTitle: string): string {
 }
 
 export class AniListClient {
-  private cache: D1Cache | null = null;
-
-  constructor(db?: D1Database) {
-    if (db) {
-      this.cache = new D1Cache(db);
-    }
-  }
+  constructor() {}
 
   private async fetchAniList(query: string, variables: any): Promise<any> {
     const response = await fetch(ANILIST_API_URL, {
@@ -150,27 +143,12 @@ export class AniListClient {
     const sanitizedTitle = sanitizeTitleForAniList(rawTitle);
     if (!sanitizedTitle) return null;
 
-    // Check D1 cache first
-    if (this.cache) {
-      const cachedId = await this.cache.getAniListIdByTitle(sanitizedTitle);
-      if (cachedId) {
-        console.log(`[AniList] Cache hit for title: ${sanitizedTitle}`);
-        return cachedId;
-      }
-    }
-
     // Fetch from AniList API
     const data = await this.fetchAniList(SEARCH_QUERY, { search: sanitizedTitle });
     if (!data) return null;
 
     const media = data?.data?.Media;
     if (media) {
-      // Save to D1 cache
-      if (this.cache) {
-        await this.cache.saveAniListTitleMapping(sanitizedTitle, media.id);
-        const metadata = this.formatMetadata(media);
-        await this.cache.saveAniListMetadata(metadata);
-      }
       return media.id;
     }
 
@@ -178,34 +156,20 @@ export class AniListClient {
   }
 
   async getMetadata(id: number): Promise<AnimeMetadata | null> {
-    // Check D1 cache first
-    if (this.cache) {
-      const cached = await this.cache.getAniListMetadata(id);
-      if (cached) {
-        console.log(`[AniList] Cache hit for metadata: ${id}`);
-        return cached;
-      }
-    }
-
     // Fetch from AniList API
     const data = await this.fetchAniList(METADATA_QUERY, { id });
     if (!data) return null;
 
     const media = data?.data?.Media;
     if (media) {
-      const metadata = this.formatMetadata(media);
-      // Save to D1 cache
-      if (this.cache) {
-        await this.cache.saveAniListMetadata(metadata);
-      }
-      return metadata;
+      return this.formatMetadata(media);
     }
 
     return null;
   }
 }
 
-// Factory function for creating client with D1
-export function createAniListClient(db?: D1Database): AniListClient {
-  return new AniListClient(db);
+// Factory function for creating client
+export function createAniListClient(): AniListClient {
+  return new AniListClient();
 }

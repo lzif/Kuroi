@@ -1,8 +1,8 @@
 import { Database } from "bun:sqlite";
 import { randomInt } from "crypto";
 import { providers, getProviderByName } from "../adapter";
-import { createAniListClient } from "../src/lib/server/scraper/anilist";
-import type { AnimeData } from "../src/lib/server/scraper/types";
+import { createAniListClient } from "../adapter/anilist";
+import type { AnimeData } from "../adapter/types";
 
 // ⚠️ Ensure this matches your Cloudflare / Local instance URL
 const INGESTION_API_URL = process.env.INGESTION_API_URL || "https://kuroi.pages.dev/api/internal/seed"; 
