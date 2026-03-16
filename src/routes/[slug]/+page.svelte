@@ -79,7 +79,7 @@
                          {/each}
                      </div>
 
-                     {#if data.watchData.downloadLinks?.length > 0}
+                     {#if (data.watchData.downloadLinks?.length ?? 0) > 0}
                         <div class="pt-4 border-t border-slate-200 dark:border-slate-700">
                             <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Download</h3>
                             <div class="flex flex-wrap gap-2">
@@ -91,7 +91,7 @@
                                         class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-pop-deep text-xs font-bold rounded-lg transition-colors flex items-center gap-1"
                                     >
                                         <span class="material-symbols-outlined text-sm">download</span>
-                                        {link.quality || 'Download'}
+                                        {link.resolution || 'Download'}
                                     </a>
                                 {/each}
                             </div>
@@ -377,3 +377,4 @@
         background-color: #94a3b8;
     }
 </style>
+yle>

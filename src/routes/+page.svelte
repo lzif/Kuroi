@@ -60,7 +60,7 @@
                         <div class="tape-strip absolute -top-4 -left-4 w-32 h-10 rotate-[-35deg] z-20 pointer-events-none"></div>
                         <div class="tape-strip absolute -bottom-4 -right-4 w-32 h-10 rotate-[-35deg] z-20 pointer-events-none"></div>
                         
-                        <div class="relative aspect-[21/9] w-full bg-cover bg-center" style="background-image: url('{heroAnime.coverImage}');">
+                        <div class="relative aspect-[21/9] w-full bg-cover bg-center" style="background-image: url('{heroAnime.image}');">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
                             <div class="absolute bottom-0 left-0 p-8 flex flex-col items-start gap-3 w-full md:w-2/3">
                                 <div class="inline-flex -rotate-2 transform items-center rounded-lg border-2 border-white bg-pop-hot px-3 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-md">

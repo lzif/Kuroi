@@ -1,19 +1,18 @@
-import { createCachedScraperManager } from '$lib/server/scraper';
+import { SamehadakuV2Adapter } from '$lib/server/SamehadakuV2Adapter';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ platform, url }) => {
-  const db = platform?.env?.DB;
-  const scraperManager = createCachedScraperManager(db);
+export const load: PageServerLoad = async ({ url }) => {
+  const adapter = new SamehadakuV2Adapter();
   
   const page = parseInt(url.searchParams.get('page') || '1') || 1;
 
   try {
-    const results = await scraperManager.getOngoing(page);
+    const results = await adapter.scrapeOngoing(page);
 
     return {
       page,
-      results: results.results,
-      hasNextPage: results.hasNextPage
+      results,
+      hasNextPage: results.length > 0
     };
   } catch (error) {
     console.error('Failed to load ongoing data:', error);

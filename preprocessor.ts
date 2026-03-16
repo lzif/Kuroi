@@ -48,7 +48,11 @@ function shrinkRepeatedNodes($: CheerioAPI, maxItems: number = 2, listThreshold:
  */
 export async function generateAgentContext(url: string): Promise<string> {
   // STEP 1: Fetch & Load (Bun Built-in)
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
 
   if (!response.ok) {
     throw new Error(`Fetch failed with status: ${response.status}`);
@@ -64,9 +68,8 @@ export async function generateAgentContext(url: string): Promise<string> {
   // STEP 3: Execute Shrinker
   shrinkRepeatedNodes($);
 
-  // STEP 4: Minify
-  // Ambil isi body saja, hilangkan spasi/tab berlebih, jadikan single line
-  const minifiedHtml = $('body').html()?.replace(/\s+/g, ' ').trim() || '';
+  // STEP 4: Get HTML
+  const minifiedHtml = $('body').html()?.trim() || '';
 
   return minifiedHtml;
 }

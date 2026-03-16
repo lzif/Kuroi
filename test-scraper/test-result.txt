@@ -1,0 +1,1831 @@
+Starting Scraper Tests...
+
+Testing: test-scraper/cijanepoi.ts
+SUCCESS: test-scraper/cijanepoi.ts
+{
+  "success": true,
+  "animeTitle": "Darwin Jihen",
+  "episodes": [
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 1,
+      "title": "Darwin Jihen Episode 01 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/01/darwin-jihen-episode-01-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 2,
+      "title": "Darwin Jihen Episode 02 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/01/darwin-jihen-episode-02-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 3,
+      "title": "Darwin Jihen Episode 03 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/01/darwin-jihen-episode-03-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 4,
+      "title": "Darwin Jihen Episode 04 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/01/darwin-jihen-episode-04-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 5,
+      "title": "Darwin Jihen Episode 05 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/02/darwin-jihen-episode-05-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 6,
+      "title": "Darwin Jihen Episode 06 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/02/darwin-jihen-episode-06-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 7,
+      "title": "Darwin Jihen Episode 07 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/02/darwin-jihen-episode-07-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 8,
+      "title": "Darwin Jihen Episode 08 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/02/darwin-jihen-episode-08-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 9,
+      "title": "Darwin Jihen Episode 09 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/03/darwin-jihen-episode-09-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    },
+    {
+      "provider": "Cijanepoi",
+      "episodeNumber": 10,
+      "title": "Darwin Jihen Episode 10 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Blogspot",
+          "resolution": "unknown",
+          "url": "https://cijanepoi.blogspot.com/2026/03/darwin-jihen-episode-10-subtitle.html",
+          "type": "download_page"
+        }
+      ]
+    }
+  ]
+}
+
+----------------------------------------
+
+Testing: test-scraper/doroni.ts
+SUCCESS: test-scraper/doroni.ts
+{
+  "success": true,
+  "animeTitle": "Perjalanan Tiada Akhir Frieren 2",
+  "episodes": [
+    {
+      "provider": "Doroni",
+      "episodeNumber": 8,
+      "title": "Perjalanan Tiada Akhir Frieren 2 Episode 8 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "GDrive",
+          "resolution": "1080p",
+          "url": "https://doroni.me/download?id=eyJpdiI6InFmcWN0VWhJdVM1T1VKVVEvcWxHM0E9PSIsInZhbHVlIjoiWXluMklGbG1lK2llSzdpZ214a3Axdz09IiwibWFjIjoiNWNjZmNhYWMwOTRiNDdjODMwOGU2MjNhNzgzYzUwOWFjZTNiNjhiYjI5N2ZhODA0MWE3NDZiZDAzNzRhYTc5MCIsInRhZyI6IiJ9",
+          "type": "download_page"
+        },
+        {
+          "server": "AceFile",
+          "resolution": "1080p",
+          "url": "https://doroni.me/download?id=eyJpdiI6Ilk2S3lJZlU4ZG4rWVlMZ0lkZTBWaEE9PSIsInZhbHVlIjoiRkxQeUUzS1kza25TaytOLzlaeW5lZz09IiwibWFjIjoiMmVhM2RiYTk1MDRhODJmMDNjYWZjMDM1YmUyMmIwNDg5ZDM5YzNjZGJjNWNmNjBmYmE1NjZkMWFkMTIzYWU4MiIsInRhZyI6IiJ9",
+          "type": "download_page"
+        },
+        {
+          "server": "GDrive",
+          "resolution": "720p",
+          "url": "https://doroni.me/download?id=eyJpdiI6ImpnS09pTGs3Z3pUcGZVRngzSUtHaFE9PSIsInZhbHVlIjoia1NhekZMWW1QUFBlWUY5Y1h6S3lhdz09IiwibWFjIjoiZmVmYjlhYmEyOWFhOWZkMTJjN2IzZjgwYTdlM2VhYzBjYmVkZTMwYzcxYjhmNDhhZWIxM2MyYjk3YmZhMTVhZSIsInRhZyI6IiJ9",
+          "type": "download_page"
+        },
+        {
+          "server": "AceFile",
+          "resolution": "720p",
+          "url": "https://doroni.me/download?id=eyJpdiI6IkJhQ1VGKzd1YzIySEFlNk4vcktVbWc9PSIsInZhbHVlIjoiSVdGT2tueXIraWVnOEZEcHZpOFBzZz09IiwibWFjIjoiMzNiZjIxNDZlMDMzZWU3MDNmZmE2ZDVhMGIyMTNmMmRkYjIxMzhiZWQ4MThhZWM1YTIzM2ZlNWVlZjMwN2U1YiIsInRhZyI6IiJ9",
+          "type": "download_page"
+        },
+        {
+          "server": "GDrive",
+          "resolution": "480p",
+          "url": "https://doroni.me/download?id=eyJpdiI6InlGdGFOa3J2MC9heU5sb3l1SDkrTVE9PSIsInZhbHVlIjoicHFicU13bjVmbzRqMlpXTGpFS1FyZz09IiwibWFjIjoiM2ViZDRkYTViNWNmMjEwNDk2NGM3MmUxMjhhNWMzMTJjNTljYmMzY2JiNzAxMjk3Zjc1NDMyMzBiNWViYjk0NiIsInRhZyI6IiJ9",
+          "type": "download_page"
+        },
+        {
+          "server": "AceFile",
+          "resolution": "480p",
+          "url": "https://doroni.me/download?id=eyJpdiI6InIrYXg2V1BlK283eXA3QVBNWlVWTEE9PSIsInZhbHVlIjoidHdxaGVFdVptZ1hvOHZPTmVHMkhrQT09IiwibWFjIjoiYWY0N2RjMTJhZjg5M2E4OWFkMjg3NDY2MTllYWE5MzY2NjVjNmEzMjVjNTBhZDYyZWZkYTFhOGU5MDU1YzE4ZSIsInRhZyI6IiJ9",
+          "type": "download_page"
+        }
+      ]
+    }
+  ]
+}
+
+----------------------------------------
+
+Testing: test-scraper/huntersekai.ts
+SUCCESS: test-scraper/huntersekai.ts
+{
+  "success": true,
+  "animeTitle": "\"Omae Gotoki ga Maou ni Kateru to Omouna\" to Yuusha Party wo Tsuihou sareta node, Outo de Kimama ni Kurashitai",
+  "episodes": [
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 1,
+      "title": "Episode 1",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://pndk.to/sTh11Fl3q",
+          "type": "shortlink",
+          "size": "76mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://pndk.to/HZtpcgBBo",
+          "type": "shortlink",
+          "size": "126mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "https://pndk.to/OMxg4DSScc",
+          "type": "shortlink",
+          "size": "287mb"
+        }
+      ]
+    },
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 2,
+      "title": "Episode 2",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://pndk.to/q2RnDYSqKP",
+          "type": "shortlink",
+          "size": "108mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://pndk.to/aTJqTBUR",
+          "type": "shortlink",
+          "size": "167mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "https://pndk.to/EV0Tpe3EY",
+          "type": "shortlink",
+          "size": "299mb"
+        }
+      ]
+    },
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 3,
+      "title": "Episode 3",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://pndk.to/JX2zDhBJ",
+          "type": "shortlink",
+          "size": "94mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://pndk.to/fvVgnbdu9",
+          "type": "shortlink",
+          "size": "148mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "https://pndk.to/0Kcg5WB6c",
+          "type": "shortlink",
+          "size": "299mb"
+        }
+      ]
+    },
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 4,
+      "title": "Episode 4",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://pndk.to/C4JrYkFnhp",
+          "type": "shortlink",
+          "size": "94mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://pndk.to/Jn3YkGojQw",
+          "type": "shortlink",
+          "size": "132mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "#",
+          "type": "shortlink",
+          "size": "#"
+        }
+      ]
+    },
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 5,
+      "title": "Episode 5",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://pndk.to/QOufTApNff",
+          "type": "shortlink",
+          "size": "94mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://pndk.to/WtgesTCDL",
+          "type": "shortlink",
+          "size": "132mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "https://pndk.to/WVy3iTMVNX",
+          "type": "shortlink",
+          "size": "170mb"
+        }
+      ]
+    },
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 6,
+      "title": "Episode 6",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://pndk.to/ZhWGomIJ",
+          "type": "shortlink",
+          "size": "94mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://pndk.to/Zimoiunjh",
+          "type": "shortlink",
+          "size": "132mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "https://pndk.to/J516vEEr",
+          "type": "shortlink",
+          "size": "170mb"
+        }
+      ]
+    },
+    {
+      "provider": "HunterSekai",
+      "episodeNumber": 7,
+      "title": "Episode 7",
+      "sources": [
+        {
+          "server": "Googledrive",
+          "resolution": "480p",
+          "url": "https://drive.google.com/file/d/1aazSEj0Cm-AL8WjWZ6HToc9603eZaqQd/view?usp=drive_link",
+          "type": "mp4",
+          "size": "94mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "720p",
+          "url": "https://drive.google.com/file/d/1fGgMafmzN0LX_A8O-cG913H3xYmqfJuE/view?usp=drive_link",
+          "type": "mp4",
+          "size": "132mb"
+        },
+        {
+          "server": "Googledrive",
+          "resolution": "1080p",
+          "url": "https://pndk.to/J516vEEr",
+          "type": "shortlink",
+          "size": "170mb"
+        }
+      ]
+    }
+  ]
+}
+
+----------------------------------------
+
+Testing: test-scraper/isekaisubs.ts
+SUCCESS: test-scraper/isekaisubs.ts
+{
+  "success": true,
+  "animeTitle": "Dark Moon: Tsuki no Saidan",
+  "episodes": [
+    {
+      "provider": "Isekaisubs",
+      "episodeNumber": 10,
+      "title": "Dark Moon: Tsuki no Saidan Episode 10 Subtitle Indonesia",
+      "sources": [
+        {
+          "server": "Drive",
+          "resolution": "1080p",
+          "url": "https://drive.google.com/file/d/135uT6SeKNkEJ-9-zny8UbwOajbf5pcFv/view?usp=drive_link",
+          "type": "mp4"
+        },
+        {
+          "server": "Acefile",
+          "resolution": "1080p",
+          "url": "https://acefile.co/f/111367206/isekaisubs-darkmoon-10-1080p-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "Pixeldrain",
+          "resolution": "1080p",
+          "url": "https://pixeldrain.com/u/mkuHRuBM",
+          "type": "download_page"
+        },
+        {
+          "server": "Drive",
+          "resolution": "720p",
+          "url": "https://drive.google.com/file/d/10HABuJ-TD-blmPLsmi-Hztcjj5uySyOf/view?usp=drive_link",
+          "type": "mp4"
+        },
+        {
+          "server": "Acefile",
+          "resolution": "720p",
+          "url": "https://acefile.co/f/111367208/isekaisubs-darkmoon-10-720p-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "Pixeldrain",
+          "resolution": "720p",
+          "url": "https://pixeldrain.com/u/itjVPoin",
+          "type": "download_page"
+        },
+        {
+          "server": "Drive",
+          "resolution": "480p",
+          "url": "https://drive.google.com/file/d/157BD0_TqY0P4jCOTmxlKD2pXx47K2Xo6/view?usp=drive_link",
+          "type": "mp4"
+        },
+        {
+          "server": "Acefile",
+          "resolution": "480p",
+          "url": "https://acefile.co/f/111367228/isekaisubs-darkmoon-10-480p-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "Pixeldrain",
+          "resolution": "480p",
+          "url": "https://pixeldrain.com/u/AfshGwqc",
+          "type": "download_page"
+        }
+      ]
+    }
+  ]
+}
+
+----------------------------------------
+
+Testing: test-scraper/moenime.ts
+SUCCESS: test-scraper/moenime.ts
+{
+  "success": true,
+  "animeTitle": "Liar Liar (Episode 01 — 12) Sub Indo",
+  "episodes": [
+    {
+      "provider": "Moenime",
+      "episodeNumber": 1,
+      "title": "Episode 01",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "126.3 MB",
+          "url": "https://ouo.io/1etzVa",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "126.3 MB",
+          "url": "https://ouo.io/xpQRCoI",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "70.0 MB",
+          "url": "https://ouo.io/YpqUyg",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "70.0 MB",
+          "url": "https://ouo.io/TnDbni",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "126.0 MB",
+          "url": "https://ouo.io/zNTPH3k",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "126.0 MB",
+          "url": "https://ouo.io/9U930V",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "72.1 MB",
+          "url": "https://ouo.io/UrZDB1",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "72.1 MB",
+          "url": "https://ouo.io/5n0djAw",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "42.4 MB",
+          "url": "https://ouo.io/5gGHvq",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "42.4 MB",
+          "url": "https://ouo.io/t3iVNL",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "23.9 MB",
+          "url": "https://ouo.io/zNLHHT",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "23.9 MB",
+          "url": "https://ouo.io/4PwGDQ",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 2,
+      "title": "Episode 02",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "118.9 MB",
+          "url": "https://ouo.io/50NwXa",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "118.9 MB",
+          "url": "https://ouo.io/6MnmYxB",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "66.3 MB",
+          "url": "https://ouo.io/wz5WEu",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "66.3 MB",
+          "url": "https://ouo.io/cdfm7N",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "118.5 MB",
+          "url": "https://ouo.io/I9YMbnJ",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "118.5 MB",
+          "url": "https://ouo.io/G7n9uFz",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "68.3 MB",
+          "url": "https://ouo.io/kV8Dn13",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "68.3 MB",
+          "url": "https://ouo.io/O567lK",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "40.5 MB",
+          "url": "https://ouo.io/kgB89w",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "40.5 MB",
+          "url": "https://ouo.io/dLQCehp",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "23.0 MB",
+          "url": "https://ouo.io/Cw6raS",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "23.0 MB",
+          "url": "https://ouo.io/t9eGJu",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 3,
+      "title": "Episode 03",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "117.6 MB",
+          "url": "https://ouo.io/43zv8F",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "117.6 MB",
+          "url": "https://ouo.io/g65lhr",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "64.7 MB",
+          "url": "https://ouo.io/0ZYFUeB",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "64.7 MB",
+          "url": "https://ouo.io/kBSAn2t",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "116.4 MB",
+          "url": "https://ouo.io/XybC3l",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "116.4 MB",
+          "url": "https://ouo.io/g296xXa",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "66.8 MB",
+          "url": "https://ouo.io/k4k477",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "66.8 MB",
+          "url": "https://ouo.io/IhZ4vB",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "39.8 MB",
+          "url": "https://ouo.io/wXjOpd2",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "39.8 MB",
+          "url": "https://ouo.io/RIxKCK",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "22.1 MB",
+          "url": "https://ouo.io/wFzSM2",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "22.1 MB",
+          "url": "https://ouo.io/Goh9e3",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 4,
+      "title": "Episode 04",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "115.8 MB",
+          "url": "https://ouo.io/ab7IMb8",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "115.8 MB",
+          "url": "https://ouo.io/HxWGHsK",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "63.7 MB",
+          "url": "https://ouo.io/WfJ7VG",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "63.7 MB",
+          "url": "https://ouo.io/MXUXkWF",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "113.4 MB",
+          "url": "https://ouo.io/MObLXz",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "113.4 MB",
+          "url": "https://ouo.io/h4gcQdJ",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "65.2 MB",
+          "url": "https://ouo.io/Rqwthj",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "65.2 MB",
+          "url": "https://ouo.io/3NfftR",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "39.2 MB",
+          "url": "https://ouo.io/2hXCVm",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "39.2 MB",
+          "url": "https://ouo.io/agtkBML",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "22.1 MB",
+          "url": "https://ouo.io/e66PMgB",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "22.1 MB",
+          "url": "https://ouo.io/bX6cCq",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 5,
+      "title": "Episode 05",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "82.6 MB",
+          "url": "https://ouo.io/yR5nZ4",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "82.6 MB",
+          "url": "https://ouo.io/lhI7tr",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "50.6 MB",
+          "url": "https://ouo.io/MQWTCXY",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "50.6 MB",
+          "url": "https://ouo.io/yfSTY6i",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "77.8 MB",
+          "url": "https://ouo.io/IjDpX48",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "77.8 MB",
+          "url": "https://ouo.io/0hWF61",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "46.8 MB",
+          "url": "https://ouo.io/rZjY5U",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "46.8 MB",
+          "url": "https://ouo.io/4aydrO",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "29.6 MB",
+          "url": "https://ouo.io/xvkU7Y",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "29.6 MB",
+          "url": "https://ouo.io/nZmzMwU",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "17.8 MB",
+          "url": "https://ouo.io/I1ofNtG",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "17.8 MB",
+          "url": "https://ouo.io/Igs5aR",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 6,
+      "title": "Episode 06",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "77.8 MB",
+          "url": "https://ouo.io/vfQyuMM",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "77.8 MB",
+          "url": "https://ouo.io/2Ea0zf",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "48.8 MB",
+          "url": "https://ouo.io/JLb66g",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "48.8 MB",
+          "url": "https://ouo.io/6Lx99H",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "70.7 MB",
+          "url": "https://ouo.io/w0jSoV",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "70.7 MB",
+          "url": "https://ouo.io/BHv6Q6b",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "43.9 MB",
+          "url": "https://ouo.io/gV0jcu",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "43.9 MB",
+          "url": "https://ouo.io/yClYAC3",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "28.9 MB",
+          "url": "https://ouo.io/2Y6mPM",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "28.9 MB",
+          "url": "https://ouo.io/Bfq4oa",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "17.5 MB",
+          "url": "https://ouo.io/SEj7B6",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "17.5 MB",
+          "url": "https://ouo.io/iTSPKud",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 7,
+      "title": "Episode 07",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "90.7 MB",
+          "url": "https://ouo.io/H0FkXI",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "90.7 MB",
+          "url": "https://ouo.io/0KywvPk",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "58.7 MB",
+          "url": "https://ouo.io/ffHaUK",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "58.7 MB",
+          "url": "https://ouo.io/YdXX5OG",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "85.0 MB",
+          "url": "https://ouo.io/neh29t",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "85.0 MB",
+          "url": "https://ouo.io/65eSby",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "52.1 MB",
+          "url": "https://ouo.io/208aFB",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "52.1 MB",
+          "url": "https://ouo.io/Ma3Zsv",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "32.7 MB",
+          "url": "https://ouo.io/Qg0JUi",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "32.7 MB",
+          "url": "https://ouo.io/OGZ6y0",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "19.9 MB",
+          "url": "https://ouo.io/kNK7i4",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "19.9 MB",
+          "url": "https://ouo.io/UjkHl0Y",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 8,
+      "title": "Episode 08",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.2 MB",
+          "url": "https://ouo.io/fXJWYT",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.2 MB",
+          "url": "https://ouo.io/yChOay",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "92.9 MB",
+          "url": "https://ouo.io/BaIDOlp",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "92.9 MB",
+          "url": "https://ouo.io/cSeXqSI",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "117.4 MB",
+          "url": "https://ouo.io/PM8pafe",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "117.4 MB",
+          "url": "https://ouo.io/eSYP05",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "68.5 MB",
+          "url": "https://ouo.io/vws8S6",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "68.5 MB",
+          "url": "https://ouo.io/58ypXJ",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "41.1 MB",
+          "url": "https://ouo.io/dQtRQR",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "41.1 MB",
+          "url": "https://ouo.io/gZOE8hm",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "22.8 MB",
+          "url": "https://ouo.io/2yMm7Dg",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "22.8 MB",
+          "url": "https://ouo.io/KAFFAC",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 9,
+      "title": "Episode 09",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.5 MB",
+          "url": "https://ouo.io/tQju1a",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.5 MB",
+          "url": "https://ouo.io/6QG4BOl",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.3 MB",
+          "url": "https://ouo.io/9m3luu",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.3 MB",
+          "url": "https://ouo.io/5ILXhYq",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.9 MB",
+          "url": "https://ouo.io/16LRH8",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.9 MB",
+          "url": "https://ouo.io/eqodj9T",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.8 MB",
+          "url": "https://ouo.io/SrVYg5Q",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.8 MB",
+          "url": "https://ouo.io/RTDrRv",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "43.3 MB",
+          "url": "https://ouo.io/GRpp983",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "43.3 MB",
+          "url": "https://ouo.io/KLh2pA",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "23.4 MB",
+          "url": "https://ouo.io/eMVIBCv",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "23.4 MB",
+          "url": "https://ouo.io/dLjgmE",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 10,
+      "title": "Episode 10",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.4 MB",
+          "url": "https://ouo.io/VSaHzK",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.4 MB",
+          "url": "https://ouo.io/5EbLR6",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.3 MB",
+          "url": "https://ouo.io/a1x83qc",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.3 MB",
+          "url": "https://ouo.io/t6Bkcgi",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.9 MB",
+          "url": "https://ouo.io/KFGWzO",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.9 MB",
+          "url": "https://ouo.io/h0wtVI",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.8 MB",
+          "url": "https://ouo.io/KYcPnL",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.8 MB",
+          "url": "https://ouo.io/NxKYyn",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "43.3 MB",
+          "url": "https://ouo.io/GOuJwsL",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "43.3 MB",
+          "url": "https://ouo.io/26tW9",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "22.4 MB",
+          "url": "https://ouo.io/Qq95Ez",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "22.4 MB",
+          "url": "https://ouo.io/xGaauue",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 11,
+      "title": "Episode 11",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.3 MB",
+          "url": "https://ouo.io/JvGxjM",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.3 MB",
+          "url": "https://ouo.io/k03VLKh",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.3 MB",
+          "url": "https://ouo.io/lfH0uh",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.3 MB",
+          "url": "https://ouo.io/HcViAv",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.8 MB",
+          "url": "https://ouo.io/xPE1F3",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.8 MB",
+          "url": "https://ouo.io/h2zqVF",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.7 MB",
+          "url": "https://ouo.io/wBiL69",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.7 MB",
+          "url": "https://ouo.io/r5mke1",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "43.2 MB",
+          "url": "https://ouo.io/IMIQJE9",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "43.2 MB",
+          "url": "https://ouo.io/4w35WE",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "24.8 MB",
+          "url": "https://ouo.io/Ncd0ekl",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "24.8 MB",
+          "url": "https://ouo.io/I1KpZA",
+          "type": "shortlink"
+        }
+      ]
+    },
+    {
+      "provider": "Moenime",
+      "episodeNumber": 12,
+      "title": "Episode 12",
+      "sources": [
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.2 MB",
+          "url": "https://ouo.io/Hn781e",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.2 MB",
+          "url": "https://ouo.io/kO6kYbA",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.2 MB",
+          "url": "https://ouo.io/ELwJdf",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.2 MB",
+          "url": "https://ouo.io/HMagoZj",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "720p",
+          "size": "142.7 MB",
+          "url": "https://ouo.io/41qMWbA",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "720p",
+          "size": "142.7 MB",
+          "url": "https://ouo.io/17pHtY",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "480p",
+          "size": "78.7 MB",
+          "url": "https://ouo.io/9Rg8DLI",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "480p",
+          "size": "78.7 MB",
+          "url": "https://ouo.io/rOqokk",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "360p",
+          "size": "43.2 MB",
+          "url": "https://ouo.io/SuaeVx",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "360p",
+          "size": "43.2 MB",
+          "url": "https://ouo.io/Vu8PyC",
+          "type": "shortlink"
+        },
+        {
+          "server": "KrakenFiles",
+          "resolution": "240p",
+          "size": "18.8 MB",
+          "url": "https://ouo.io/WoqCdga",
+          "type": "shortlink"
+        },
+        {
+          "server": "DriveMoe",
+          "resolution": "240p",
+          "size": "18.8 MB",
+          "url": "https://ouo.io/xzh968",
+          "type": "shortlink"
+        }
+      ]
+    }
+  ]
+}
+
+----------------------------------------
+
+Testing: test-scraper/oploverz.ts
+SUCCESS: test-scraper/oploverz.ts
+{
+  "success": true,
+  "animeTitle": "Oshi no Ko S3",
+  "episodes": [
+    {
+      "provider": "Oploverz",
+      "episodeNumber": 9,
+      "title": "Oshi no Ko S3 Episode 9",
+      "sources": [
+        {
+          "server": "GD (mp4)",
+          "resolution": "480p",
+          "url": "https://acefile.co/f/111355121/oploverz-plus-onks3-09-mp4-480p-mp4",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (mp4)",
+          "resolution": "480p",
+          "url": "https://akirabox.com/RMKGJwbkVm1o/file",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (mp4)",
+          "resolution": "720p",
+          "url": "https://acefile.co/f/111355122/oploverz-plus-onks3-09-mp4-720p-mp4",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (mp4)",
+          "resolution": "720p",
+          "url": "https://akirabox.com/b5OzdMnRlGB8/file",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (mp4)",
+          "resolution": "1080p",
+          "url": "https://acefile.co/f/111355123/oploverz-plus-onks3-09-mp4-1080p-mp4",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (mp4)",
+          "resolution": "1080p",
+          "url": "https://akirabox.com/obj3jONnrzDx/file",
+          "type": "download_page"
+        },
+        {
+          "server": "FILEDON (mp4)",
+          "resolution": "1080p",
+          "url": "https://filedon.co/view/phXhqCll85",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (mkv)",
+          "resolution": "480p",
+          "url": "https://acefile.co/f/111355147/oploverz-plus-onks3-09-480p7536dae2-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (mkv)",
+          "resolution": "480p",
+          "url": "https://akirabox.com/7d5GLeRE5mxR/file",
+          "type": "download_page"
+        },
+        {
+          "server": "BUZZ (mkv)",
+          "resolution": "480p",
+          "url": "https://buzzheavier.com/59h7zbi8l8u6",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (mkv)",
+          "resolution": "720p",
+          "url": "https://acefile.co/f/111355145/oploverz-plus-onks3-09-720pf8bffb28-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (mkv)",
+          "resolution": "720p",
+          "url": "https://akirabox.com/5pVzNBZPbz7w/file",
+          "type": "download_page"
+        },
+        {
+          "server": "BUZZ (mkv)",
+          "resolution": "720p",
+          "url": "https://buzzheavier.com/9xlput6i1z7d",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (mkv)",
+          "resolution": "1080p",
+          "url": "https://acefile.co/f/111355146/oploverz-plus-onks3-09-1080pce90c923-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (mkv)",
+          "resolution": "1080p",
+          "url": "https://akirabox.com/APVmaBolV3Xo/file",
+          "type": "download_page"
+        },
+        {
+          "server": "BUZZ (mkv)",
+          "resolution": "1080p",
+          "url": "https://buzzheavier.com/afo1wpxeqz5d",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (x265 mkv | versi hemat)",
+          "resolution": "480p",
+          "url": "https://acefile.co/f/111355230/oploverz-plus-onks3-09-x265-480p-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (x265 mkv | versi hemat)",
+          "resolution": "480p",
+          "url": "https://akirabox.com/Pbe3P1ogWzlX/file",
+          "type": "download_page"
+        },
+        {
+          "server": "FILEDON (x265 mkv | versi hemat)",
+          "resolution": "480p",
+          "url": "https://filedon.co/view/IRmZXYS6Vt",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (x265 mkv | versi hemat)",
+          "resolution": "720p",
+          "url": "https://acefile.co/f/111355231/oploverz-plus-onks3-09-x265-720p-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (x265 mkv | versi hemat)",
+          "resolution": "720p",
+          "url": "https://akirabox.com/k0embd2KnzVb/file",
+          "type": "download_page"
+        },
+        {
+          "server": "FILEDON (x265 mkv | versi hemat)",
+          "resolution": "720p",
+          "url": "https://filedon.co/view/VHX226owKe",
+          "type": "download_page"
+        },
+        {
+          "server": "GD (x265 mkv | versi hemat)",
+          "resolution": "1080p",
+          "url": "https://acefile.co/f/111355232/oploverz-plus-onks3-09-x265-1080p-mkv",
+          "type": "download_page"
+        },
+        {
+          "server": "AKIRA (x265 mkv | versi hemat)",
+          "resolution": "1080p",
+          "url": "https://akirabox.com/0KezkDqo2GD1/file",
+          "type": "download_page"
+        },
+        {
+          "server": "FILEDON (x265 mkv | versi hemat)",
+          "resolution": "1080p",
+          "url": "https://filedon.co/view/DcGwgn1LpL",
+          "type": "download_page"
+        }
+      ]
+    }
+  ]
+}
+
+----------------------------------------
+
+Testing: test-scraper/silveryasha.ts
+SUCCESS: test-scraper/silveryasha.ts
+--- Testing Season Page ---
+{
+  "success": true,
+  "animeTitle": "Season List",
+  "episodes": [],
+  "animeList": [
+    {
+      "title": "\"Omae Gotoki ga Maou ni Kateru to Omouna\" to Yuusha Party wo Tsuihou sareta node, Outo de Kimama ni Kurashitai",
+      "url": "https://db.silveryasha.id/anime/6020",
+      "episodes": "12 eps",
+      "studio": "A.C.G.T.",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ]
+    },
+    {
+      "title": "[Oshi no Ko] 3rd Season",
+      "url": "https://db.silveryasha.id/anime/5956",
+      "episodes": "11 eps",
+      "studio": "Doga Kobo",
+      "genres": [
+        "Drama",
+        "Reincarnation",
+        "Seinen"
+      ]
+    }
+  ]
+}
+
+--- Testing Detail Page ---
+{
+  "success": true,
+  "animeTitle": "\"Omae Gotoki ga Maou ni Kateru to Omouna\" to Yuusha Party wo Tsuihou sareta node, Outo de Kimama ni Kurashitai",
+  "episodes": [],
+  "metadata": {
+    "synopsis": "Flum Apricot was never meant to be a hero. Despite zero stats across the board and a power she can't even use, she somehow finds herself included in a party of heroes. But Flum's life hits rock bottom when the party's renowned sage, Jean Inteige, decides that the useless girl is dead weight, and arranges to have her sold into slavery. Tossed to monsters to be feasted upon for her master's entertainment, Flum makes the desperate choice to reach for a cursed weapon... and something new awakens within her. A grimdark tale about one woman's blood-soaked quest to reclaim her life!\n\n(Source: Seven Seas Entertainment)",
+    "projects": [
+      {
+        "groupName": "Crunchyroll",
+        "link": "https://www.crunchyroll.com/series/GT00365592/",
+        "status": "Jalan",
+        "tags": [
+          "WEB-DL",
+          "Softsub"
+        ]
+      },
+      {
+        "groupName": "Doronime",
+        "link": "https://doroni.me/anime/jungkir-balik-terus-mati",
+        "status": "Jalan",
+        "tags": [
+          "TV",
+          "Softsub"
+        ]
+      },
+      {
+        "groupName": "Hunter no Sekai",
+        "link": "https://huntersekai.fansub.my.id/2026/01/omae-gotoki-ga-maou-ni-kateru-to-omouna.html",
+        "status": "Jalan",
+        "tags": [
+          "TV",
+          "Softsub"
+        ]
+      },
+      {
+        "groupName": "Samehadaku",
+        "link": "https://v1.samehadaku.how/anime/omae-gotoki-ga-maou-ni-kateru-to-omouna/",
+        "status": "Jalan",
+        "tags": [
+          "TV",
+          "Hardsub"
+        ]
+      }
+    ]
+  }
+}
+
+----------------------------------------
+
+All tests completed.

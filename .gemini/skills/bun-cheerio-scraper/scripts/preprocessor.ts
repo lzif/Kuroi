@@ -64,9 +64,8 @@ export async function generateAgentContext(url: string): Promise<string> {
   // STEP 3: Execute Shrinker
   shrinkRepeatedNodes($);
 
-  // STEP 4: Minify
-  // Ambil isi body saja, hilangkan spasi/tab berlebih, jadikan single line
-  const minifiedHtml = $('body').html()?.replace(/\s+/g, ' ').trim() || '';
+  // STEP 4: Get HTML
+  const minifiedHtml = $('body').html()?.trim() || '';
 
   return minifiedHtml;
 }

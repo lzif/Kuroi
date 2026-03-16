@@ -1,10 +1,9 @@
-import { createCachedScraperManager } from '$lib/server/scraper';
+import { SamehadakuV2Adapter } from '$lib/server/SamehadakuV2Adapter';
 import type { PageServerLoad } from './$types';
-import type { SearchResult } from '$lib/server/scraper/types';
+import type { SearchResult } from '$lib/server/ProviderAdapter';
 
-export const load: PageServerLoad = async ({ platform, url }) => {
-  const db = platform?.env?.DB;
-  const scraperManager = createCachedScraperManager(db);
+export const load: PageServerLoad = async ({ url }) => {
+  const adapter = new SamehadakuV2Adapter();
   
   // Basic query parsing. Our API defaults page to 1.
   const query = url.searchParams.get('q') || '';
@@ -14,7 +13,7 @@ export const load: PageServerLoad = async ({ platform, url }) => {
     let results: SearchResult = { results: [], hasNextPage: false, currentPage: page };
     
     if (query) {
-        results = await scraperManager.search(query, page);
+        results = await adapter.search(query, page);
     }
 
     return {

@@ -1,26 +1,26 @@
-import { createCachedScraperManager } from '$lib/server/scraper';
+import { SamehadakuV2Adapter } from '$lib/server/SamehadakuV2Adapter';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params, url, platform }) => {
-  const db = platform?.env?.DB;
-  const scraperManager = createCachedScraperManager(db);
+export const load: PageServerLoad = async ({ params, url }) => {
+  const adapter = new SamehadakuV2Adapter();
 
   const { slug } = params;
   const epParam = url.searchParams.get('ep');
   const episodeNumber = epParam ? Number(epParam) : null;
 
   try {
-    // Parallelize requests where possible to speed up loading
-    // We always want the anime details (for metadata/cover) and the episode list
-    const [anime, episodes] = await Promise.all([
-      scraperManager.getAnimeDetail(slug),
-      scraperManager.getEpisodeList(slug)
-    ]);
+    const animeUrl = `${adapter.baseUrl}/anime/${slug}/`;
+    // We get both details and episodes from the same scrape
+    const anime = await adapter.scrapeAnimeDetail(animeUrl);
+    const episodes = anime.episodes;
 
     let watchData = null;
     if (episodeNumber !== null) {
       try {
-        watchData = await scraperManager.getWatch(slug, episodeNumber);
+        const currentEp = episodes.find(e => e.number === episodeNumber);
+        if (currentEp && currentEp.url) {
+            watchData = await adapter.extractStreamLinks(currentEp.url);
+        }
       } catch (e) {
         console.error(`Failed to load watch data for ${slug} ep ${episodeNumber}:`, e);
       }
