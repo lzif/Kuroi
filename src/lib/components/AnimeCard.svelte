@@ -11,7 +11,7 @@
     showUpdate?: boolean;
   }>();
   
-  let href = $derived(`/${anime.source}:${anime.slug}`);
+  let href = $derived(`/${anime.slug}`);
   let statusBadge = $derived(anime.episode ? `EP ${anime.episode}` : (anime.status && anime.status.includes('Episode') ? anime.status : null));
 </script>
 

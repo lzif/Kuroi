@@ -124,7 +124,7 @@
                 {#if data.completed.length > 0}
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-2">
                     {#each data.completed as anime}
-                    <a href="/{anime.source}:{anime.slug}" class="group rounded-xl border-4 border-white bg-pop-paper p-3 shadow-hard-sm hover:shadow-hard-md transition-all hover:-translate-y-1 cursor-pointer block">
+                    <a href="/{anime.slug}" class="group rounded-xl border-4 border-white bg-pop-paper p-3 shadow-hard-sm hover:shadow-hard-md transition-all hover:-translate-y-1 cursor-pointer block">
                         <div class="aspect-video w-full rounded-lg bg-cover bg-center mb-3 relative overflow-hidden" style="background-image: url('{anime.coverImage}');">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                         </div>
