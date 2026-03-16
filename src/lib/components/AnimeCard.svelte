@@ -1,10 +1,12 @@
 <script lang="ts">
+  import type { AnimeInfo } from '$lib/server/ProviderAdapter';
+
   let { 
     anime, 
     variant = 'poster', // 'poster' (title inside) | 'details' (title outside)
     showUpdate = false 
   } = $props<{
-    anime: any;
+    anime: AnimeInfo;
     variant?: 'poster' | 'details';
     showUpdate?: boolean;
   }>();
